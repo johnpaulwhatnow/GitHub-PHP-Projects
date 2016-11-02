@@ -4,6 +4,11 @@ Popular PHP GitHub Repos
 
 This small web application uses the GitHub V3 API, Symfony 2.8 and Angular 1.3 to create simple list and detail views of the most stared libraries on GitHub. To understand more about the application architecture, check out the Architecture section. If not, below are instructions.
 
+# Screenshots
+![Alt text](/screenshots/list-view.PNG?raw=true "List View")
+
+![Alt text](/screenshots/detail-view.PNG?raw=true "Detail View")
+
 # Backend Installation
 
 ## Installing Symfony

@@ -78,6 +78,17 @@ This project makes use of the default "web" folder as a webroot. You can find in
 
 Simply copy the contents of this repo’s "web" folder into your project’s “web” folder.
 
+## Clearing the Cache
+
+Before running any routes, make sure both the prod and dev env in Symfony2 are refreshed. 
+
+```
+ php app/console cache:clear --env=prod
+ 
+ php app/console cache:clear 
+ 
+``` 
+
 ## Populating the Database
 
 Assuming you’ve set this up at a localhost, and set your apache root to your webfolder,  you can populate the database by visiting this page:

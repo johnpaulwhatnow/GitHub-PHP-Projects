@@ -1,0 +1,61 @@
+<h2>{{repo.name}}</h2>
+<div class="repo">
+    <table class="table table-striped">
+        <tr>
+            <td>
+               GitHub Id:
+            </td>
+            <td>
+                {{repo.githubId}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+               Name:
+            </td>
+            <td>
+                {{repo.name}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Project URL
+            </td>
+            <td>
+                <a href="{{repo.url}}" target="_blank">{{repo.url}}</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Date Created
+            </td>
+            <td>
+                {{repo.createdAtMoment|amDateFormat:'MM/DD/YYYY'}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Last Push Date
+            </td>
+            <td>
+                {{repo.lastPushDatetMoment|amDateFormat:'MM/DD/YYYY'}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Project Description
+            </td>
+            <td>
+                {{repo.description}}
+            </td>
+        </tr>
+        <tr>
+            <td>
+               Number of Stars
+            </td>
+            <td>
+                {{repo.stars}}
+            </td>
+        </tr>
+    </table>

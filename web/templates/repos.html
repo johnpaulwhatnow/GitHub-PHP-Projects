@@ -1,0 +1,50 @@
+<div class="row">
+    <div class="container">
+        <div class="col-sm-12">
+
+        </div>
+    </div>
+</div>
+<div class="row padded">
+    <div class="col-sm-3">
+        <div class="well">
+            <form>
+                <div class="form-group">
+                    <label for="query" >Filter Repos:</label>
+                    <input type="text" class="form-control" id="query" placeholder="Name" ng-model="query"/>
+
+
+                </div>
+                <div class="form-group">
+                    <label for="sort" >Sort Repos:</label>
+                    <sort sorters="{{sorters}}"></sort>
+
+                </div>
+
+
+
+            </form>
+        </div>
+    </div>
+    <div class="col-sm-9">
+        <table class="table table-striped">
+            <tr>
+
+                <th>Package Name</th>
+
+                <th>Date Created</th>
+                <th>Last Push</th>
+                <th>Stars</th>
+            </tr>
+            <tr ng-repeat="repo in repos | filter:{name:query} | orderBy:sortBy" >
+
+                <td> <a ng-href="#/repos/{{repo.id}}">{{repo.name}}</td>
+
+                <td>{{repo.created_at_moment|amDateFormat:'MM/DD/YYYY'}} </td>
+                <td>{{repo.last_push_date_moment|amDateFormat:'MM/DD/YYYY'}} </td>
+                <td>{{repo.stars}}</td>
+            </tr>
+        </table>
+    </div>
+
+</div>

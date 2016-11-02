@@ -1,0 +1,10 @@
+				<!-- <button ng-class="" class="btn btn-primary btn-block" ng-click="">User Name ASC</button>
+				 <button ng-class="" class="btn btn-primary btn-block" ng-click="">User Name DESC</button>
+				 -->
+<div class="form-group" ng-repeat="sort in sorters">
+	<label>{{ sort.display }}</label>
+	<div class="btn-group" role="group" aria-label="..." >
+	  <button type="button" ng-click="setSortBy(sort.key)" ng-class="{ 'active': sortBy == sort.key}" value="{{sort.key}}" class="btn btn-default">ASC</button>
+	  <button type="button" ng-click="setSortBy('-'+sort.key)" ng-class="{ 'active': sortBy ==  '-'+sort.key}"  value="{{sort.key}}"  class="btn btn-default">DESC</button>
+	</div>
+</div>
